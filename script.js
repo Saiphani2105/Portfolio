@@ -28,10 +28,19 @@ function openGitHub() {
     window.open(githubURL, "_blank"); // Opens in new tab
   }
 
+
 function openHuggingFace() {
     window.open("https://huggingface.co/spaces/Phaneendrabayi/Zero_To_Hero_Machine_Learning", "_blank");
   }
 
 function openMediumHF() {
     window.open("https://huggingface.co/spaces/Phaneendrabayi/Medium_Tag_Prediction", "_blank");
+  }
+
+ function openGitHub1() {
+    window.open("https://github.com/Saiphani2105/", "_blank");
+  }
+
+  function openHuggingFace1() {
+    window.open("https://huggingface.co/spaces/Phaneendrabayi", "_blank");
   }
