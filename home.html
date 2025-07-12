@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai Phaneendra | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .hover-gold:hover {
+            color: #d4af37 !important;
+            text-shadow: 0 0 3px #d4af37;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- ✅ HERO SECTION -->
+    <section class="min-vh-100 d-flex flex-column justify-content-center align-items-center text-center px-3">
+
+        <!-- Name -->
+        <h1 class="display-3 fw-bold text-white mb-3 hover-gold">
+            BAI PHANEENDRA
+        </h1>
+
+        <!-- Skills -->
+        <p class="fw-bold text-white fs-5 mb-4">
+            <span class="me-2 hover-gold">PYTHON</span>|
+            <span class="mx-2 hover-gold">SQL</span>|
+            <span class="mx-2 hover-gold">EDA</span>|
+            <span class="mx-2 hover-gold">Machine Learning</span>|
+            <span class="mx-2 hover-gold">Deep Learning</span>|
+            <span class="ms-2 hover-gold">GEN AI</span>
+        </p>
+
+        <!-- ✅ Bootstrap Navbar (centered) -->
+        <nav class="navbar navbar-expand-md bg-black">
+            <div class="container justify-content-center">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-gold" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-gold" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-gold" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-gold" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-gold" href="#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-gold" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-warning fw-bold px-3 py-1" onclick="toggleResumeDropdown()">
+                            <i class="bi bi-download"></i> Resume
+                        </button>
+                        <ul id="resumeMenu" class="dropdown-menu-custom d-none mt-2" style="background-color: #1a1a1a;">
+                            <a class="dropdown-item-custom" href="Bai-Phaneendra-Data Analyst-Resume.pdf" download> Data
+                                Analyst</a>
+                            <a class="dropdown-item-custom" href="Bai-Phaneendra-Data Science Resume.pdf" download> Data
+                                Scientist</a>
+                            <a class="dropdown-item-custom" href="Bai-Phaneendra-Data Science And Gen ai Resume.pdf"
+                                download> Gen AI</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </section>
+
+
+    <!-- ✅ ABOUT SECTION -->
+    <section id="about" class="py-5 text-light" style="background-color: #1a1a1a;">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+
+                <!-- Profile Image -->
+                <div class="col-md-4 text-center">
+                    <img src="pic.png" alt="Phaneendra Profile Picture" class="img-fluid rounded-circle shadow"
+                        style="width: 280px; height: 280px; object-fit: cover;">
+                </div>
+
+                <!-- About Text -->
+                <div class="col-md-8">
+                    <h2 class="text-warning mb-3">About Me</h2>
+                    <p>
+                        I'm <span class="text-warning fw-semibold">Bai Phaneendra</span>, a Data Science and AI
+                        enthusiast passionate about turning raw data into impactful insights. My core skills include
+                        <strong>Python, SQL, Machine Learning, Deep Learning, and Gen AI</strong>. I’ve worked on
+                        real-time data projects involving <strong>EDA, model building, and deployment</strong> using
+                        tools like <strong>Streamlit, OpenCV, and Scikit-learn</strong>. <br><br>
+                        My mission is to <span class="fw-semibold text-warning">solve real-world problems with
+                            data-driven solutions</span>.
+                    </p>
+
+
+                    <!-- Toggle Button -->
+                    <button class="btn btn-warning mt-3" onclick="toggleEducation(this)">
+                        Know My Education Background
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ EDUCATION SECTION -->
+    <section id="education" class="py-5 text-light d-none" style="background-color: #1a1a1a;">
+        <div class="container">
+            <h2 class="text-warning text-center mb-5">Education</h2>
+            <div class="row justify-content-center g-4">
+
+                <!-- PG Card -->
+                <div class="col-md-5">
+                    <div class="card border-warning bg-black text-light h-100">
+                        <div class="card-header bg-transparent border-warning text-warning">
+                            <h5 class="mb-0">Post Graduation</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Degree:</strong> Master of Computer Applications (M.C.A)</p>
+                            <p><strong>University:</strong> Kakatiya University</p>
+                            <p><strong>Specialization:</strong> AI & ML</p>
+                            <p><strong>Duration:</strong> 2022 – 2024</p>
+                            <p><strong>CGPA:</strong> 7.08</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UG Card -->
+                <div class="col-md-5">
+                    <div class="card border-warning bg-black text-light h-100">
+                        <div class="card-header bg-transparent border-warning text-warning">
+                            <h5 class="mb-0">Under Graduation</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Degree:</strong> B.Sc – Mathematics, Statistics, Computer Science</p>
+                            <p><strong>College:</strong> Donbosco Degree College</p>
+                            <p><strong>Year of Completion:</strong> 2019 – 2022</p>
+                            <p><strong>CGPA:</strong> 7.44</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ✅ SKILLS SECTION -->
+    <section id="skills" class="py-5 text-light" style="background-color: #2f2f2f;">
+        <div class="container text-center">
+            <h2 class="text-warning mb-5">My Skills</h2>
+
+            <div class="row justify-content-center g-4">
+
+                <!-- Skill Card Template -->
+                <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">Python</div>
+                            <div class="flip-back">
+                                <ul class="list-unstyled small">
+                                    <li>Core Python</li>
+                                    <li>OOP</li>
+                                    <li>Pandas, NumPy</li>
+                                    <li>File I/O & Regex</li>
+                                    <li>Automation Scripting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeat for other skills -->
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">SQL</div>
+                            <div class="flip-back">
+                                <ul class="list-unstyled small">
+                                    <li>Joins & Subqueries</li>
+                                    <li>CTEs, Views</li>
+                                    <li>Window Functions</li>
+                                    <li>Stored Procedures</li>
+                                    <li>DDL / DML / DCL</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">Data Visualization</div>
+                            <div class="flip-back">
+                                <ul class="list-unstyled small">
+                                    <li>Matplotlib</li>
+                                    <li>Seaborn</li>
+                                    <li>Plotly</li>
+                                    <li>Power BI</li>
+                                    <li>Dashboards</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">Machine Learning</div>
+                            <div class="flip-back">
+                                <ul class="list-unstyled small">
+                                    <li>Scikit-learn</li>
+                                    <li>Regression Models</li>
+                                    <li>Classification</li>
+                                    <li>Clustering (KMeans)</li>
+                                    <li>Model Tuning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">Deep Learning</div>
+                            <div class="flip-back">
+                                <ul class="list-unstyled small">
+                                    <li>Keras & TensorFlow</li>
+                                    <li>ANN, CNN, RNN</li>
+                                    <li>LSTM</li>
+                                    <li>Image Classification</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">Gen AI</div>
+                            <div class="flip-back">
+                                <ul class="list-unstyled small">
+                                    <li>LLM Prompting</li>
+                                    <li>LangChain</li>
+                                    <li>Chatbot Creation</li>
+                                    <li>OpenAI/Groq API</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+                    <div class="flip-card">
+                        <div class="flip-inner">
+                            <div class="flip-front">Agentic AI</div>
+                            <div class="flip-back">
+                                <ul class="list-unstyled small">
+                                    <li>LangGraph</li>
+                                    <li>Crew_AI</li>
+                                    <li>MCP</li>
+                                    <li>N8N Basics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="projects" class="py-5 text-light" style="background-color: #3d3d3d;">
+        <div class="container">
+            <h2 class="text-warning text-center mb-5">My Projects</h2>
+
+            <!-- Project Card with hover reveal -->
+            <div class="card project-card text-light mb-5 mx-auto border-start border-1 border-warning"
+                style="background-color: #2f2f2f; max-width: 900px;">
+                <div class="card-body">
+                    <!-- Always visible -->
+                    <h4 class="card-title text-warning text-center mb-0">Project Title: Sign Language Detection System
+                    </h4>
+
+                    <!-- Content hidden initially, revealed on hover -->
+                    <div class="project-details mt-3">
+                        <p class="fw-light fst-italic"><strong>Brief Description:</strong> A real-time application that
+                            detects and translates Indian Sign Language gestures using a webcam feed.</p>
+
+                        <p><strong>Problem Statement:</strong> Bridging the communication gap between hearing-impaired
+                            individuals and others by enabling gesture-based interaction.</p>
+
+                        <p><strong>Your Role & Contribution:</strong> Developed the full pipeline — from data
+                            acquisition and preprocessing to model training and live deployment using OpenCV and
+                            MediaPipe.</p>
+
+                        <p><strong>Technologies Used:</strong> Python, OpenCV, MediaPipe, NumPy, Scikit-learn,
+                            RandomForest, Streamlit</p>
+
+                        <p><strong class="text-warning">Goals & Objectives:</strong> Build an accurate, real-time system
+                            to recognize hand gestures for sign language and achieve over 90% classification accuracy.
+                        </p>
+
+                        <p><strong class="text-warning">Process & Methodology:</strong> Followed an agile development
+                            approach — used MediaPipe for landmark detection, manually extracted features, trained ML
+                            models, and deployed using Streamlit.</p>
+
+                        <p><strong class="text-warning">Challenges & Solutions:</strong> Faced difficulty in detecting
+                            gestures under poor lighting. Solved it by applying adaptive histogram equalization and
+                            consistent data augmentation.</p>
+
+                        <p><strong class="text-warning">Results & Outcomes:</strong> Achieved 93% accuracy with
+                            real-time detection. The app enables interactive translation and is deployable on web
+                            browsers.</p>
+
+                        <p><strong class="text-warning">Learnings & Takeaways:</strong> Gained hands-on experience with
+                            computer vision pipelines, classical ML tuning, real-time deployment, and Streamlit UI
+                            design.</p>
+
+                        <div class="text-center">
+
+                            <button class="btn btn-warning mt-3" onclick="openGitHub()">
+                                <i class="bi bi-github"></i> View on GitHub
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card: Tag Prediction for Medium Articles -->
+        <div class="card project-card text-light mb-5 mx-auto border-start border-1 border-warning"
+            style="background-color: #2f2f2f; max-width: 900px;">
+            <div class="card-body">
+                <!-- Always visible -->
+                <h4 class="card-title text-warning text-center mb-0">
+                    Project Title: Tag Prediction for Medium Articles (ML, NLP)
+                </h4>
+
+                <!-- Hover Reveal Content -->
+                <div class="project-details mt-3">
+                    <p class="fw-light fst-italic">
+                        <strong>Brief Description:</strong> An NLP-based multi-label classification app that suggests
+                        relevant tags from Medium article content to improve discoverability.
+                    </p>
+
+                    <p><strong>Problem Statement:</strong> Medium authors often struggle with selecting optimal tags for
+                        visibility. This project automates and improves that process.</p>
+
+                    <p><strong>Your Role & Contribution:</strong> Built the entire pipeline from preprocessing to model
+                        training and live deployment using Streamlit.</p>
+
+                    <p><strong>Technologies Used:</strong> Python, Scikit-learn, NLTK, Streamlit, Hugging Face, TF-IDF,
+                        Naive Bayes</p>
+
+                    <p><strong class="text-warning">Goals & Objectives:</strong> Reduce manual effort in tagging and
+                        assist writers in choosing relevant tags to boost reach.</p>
+
+                    <p><strong class="text-warning">Process & Methodology:</strong> Cleaned article text using
+                        tokenization, stopword removal, lemmatization, and TF-IDF vectorization. Used
+                        MultiLabelBinarizer and OneVsRestClassifier for training.</p>
+
+                    <p><strong class="text-warning">Challenges & Solutions:</strong> Handled class imbalance using
+                        proper tag frequency thresholds and evaluated using F1 score for multi-label setup.</p>
+
+                    <p><strong class="text-warning">Results & Outcomes:</strong> Delivered a deployable, real-time
+                        system that achieved high precision in tag prediction and improved user experience.</p>
+
+                    <p><strong class="text-warning">Learnings & Takeaways:</strong> Gained practical experience in
+                        multi-label text classification, deployment with Streamlit, and Hugging Face integration.</p>
+
+                    <!-- Buttons -->
+                    <div class="text-center d-flex justify-content-center gap-3 mt-3 flex-wrap">
+                        <button class="btn btn-warning" onclick="openMediumHF()">
+                            🤗 Hugging Face
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ✅ Second Project Card: LLM-Powered RAG Chatbot -->
+        <div class="card project-card text-light mb-5 mx-auto border-start border-1 border-warning"
+            style="background-color: #2f2f2f; max-width: 900px;">
+            <div class="card-body">
+                <!-- Always visible -->
+                <h4 class="card-title text-warning text-center mb-0">
+                    Project Title: LLM-Powered RAG Chatbot (Google Gemini & LangChain)
+                </h4>
+
+                <!-- Content hidden initially, revealed on hover -->
+                <div class="project-details mt-3">
+                    <p class="fw-light fst-italic">
+                        <strong>Brief Description:</strong> Built an enterprise-grade PDF-based Q&A chatbot using a
+                        Retrieval Augmented Generation (RAG) pipeline.
+                    </p>
+
+                    <p><strong>Problem Statement:</strong> Organizations faced delays in accessing critical knowledge
+                        from large PDF documents manually.</p>
+
+                    <p><strong>Your Role & Contribution:</strong> Developed the full system integrating Google Gemini,
+                        LangChain, FAISS, and Streamlit for intelligent document-based querying.</p>
+
+                    <p><strong>Technologies Used:</strong> Python, GoogleGenerativeAI, LangChain, FAISS, Streamlit</p>
+
+                    <p><strong class="text-warning">Goals & Objectives:</strong> Automate and accelerate document search
+                        using semantic retrieval and large language models.</p>
+
+                    <p><strong class="text-warning">Process & Methodology:</strong> Embedded PDFs using
+                        GoogleGenerativeAIEmbeddings, stored in FAISS vector DB, and managed multi-turn conversations
+                        using LangChain memory.</p>
+
+                    <p><strong class="text-warning">Challenges & Solutions:</strong> Ensured context-aware responses
+                        across multiple queries using chat history and tested various embedding strategies for accuracy.
+                    </p>
+
+                    <p><strong class="text-warning">Results & Outcomes:</strong> Reduced HR onboarding and training time
+                        by 80%, replacing manual lookups with instant AI answers.</p>
+
+                    <p><strong class="text-warning">Learnings & Takeaways:</strong> Gained hands-on experience in
+                        building robust RAG pipelines, memory-managed LLM conversations, and interactive Streamlit apps.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="publications" class="py-5 text-light" style="background-color: #4f4f4f;">
+        <div class="container">
+            <h2 class="text-warning text-center mb-5">ML Zero To Hero - Self-Published (2025)</h2>
+
+            <div class="card border-start border-4 border-warning bg-dark text-light shadow-lg mx-auto"
+                style="max-width: 900px;">
+                <div class="card-body">
+
+                    <p><strong class="text-warning">Platform:</strong> Published via <a href="https://huggingface.co/"
+                            target="_blank" class="text-warning text-decoration-underline">Hugging Face</a></p>
+
+                    <p><strong class="text-warning">Overview:</strong> Designed and developed a comprehensive, web-based
+                        learning platform to simplify Machine Learning (ML), Natural Language Processing (NLP), and
+                        Computer Vision (OpenCV) concepts through real-world, hands-on projects.</p>
+
+                    <ul class="mb-4">
+                        <li class="mb-2">Covered foundational to advanced topics such as Supervised & Unsupervised
+                            Learning, Model Selection, NLP pipelines (tokenization, stemming, vectorization), and image
+                            classification workflows.</li>
+                        <li class="mb-2">Implemented advanced Image Augmentation techniques including rotation,
+                            flipping, brightness/contrast adjustments, and Gaussian noise to improve model robustness in
+                            vision tasks.</li>
+                        <li class="mb-2">Delivered step-by-step interactive tutorials and code walkthroughs using
+                            <strong>Streamlit</strong> for real-time visualizations and feedback.
+                        </li>
+                        <li class="mb-2">Used Python libraries such as <strong>Scikit-learn, NLTK, OpenCV, Matplotlib,
+                                Pandas</strong> to create engaging examples and reusable modules.</li>
+                        <li class="mb-2">Targeted students, early-career data scientists, and AI enthusiasts with no
+                            prior experience—bridging the gap between theory and practical implementation.</li>
+                    </ul>
+
+                    <div class="text-center">
+                        <button class="btn btn-warning" onclick="openHuggingFace()">
+                            <i class="bi bi-book"></i> View Publication on Hugging Face
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ✅ CONTACT SECTION -->
+    <section id="contact" class="py-5 text-light" style="background-color: #5f5f5f;">
+        <div class="container">
+            <h2 class="text-warning text-center mb-5">Contact Me</h2>
+
+            <div class="row justify-content-center text-center gy-4">
+
+                <!-- Email -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <i class="bi bi-envelope-fill fs-3 text-warning mb-2"></i>
+                    <p class="mb-0">Email</p>
+                    <p><a href="mailto:phaneendra.bayi@example.com"
+                            class="text-light text-decoration-none">phaneendra.bayi@gmail.com</a></p>
+                </div>
+
+                <!-- Phone -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <i class="bi bi-telephone-fill fs-3 text-warning mb-2"></i>
+                    <p class="mb-0">Phone</p>
+                    <p><a href="tel:+911234567890" class="text-light text-decoration-none">+91 8106650115</a></p>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <i class="bi bi-linkedin fs-3 text-warning mb-2"></i>
+                    <p class="mb-0">LinkedIn</p>
+                    <p><a href="https://linkedin.com/in/bai-phaneendra" target="_blank"
+                            class="text-light text-decoration-none">Bai Phaneendra</a></p>
+                </div>
+
+                <!-- GitHub -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <i class="bi bi-github fs-3 text-warning mb-2"></i>
+                    <p class="mb-0">GitHub</p>
+                    <p><a href="https://github.com/Saiphani2105/" target="_blank"
+                            class="text-light text-decoration-none">github.com/Saiphani2105</a></p>
+                </div>
+
+                <!-- Hugging Face -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face Logo"
+                        width="32" class="mb-2">
+                    <p class="mb-0">Hugging Face</p>
+                    <p><a href="https://huggingface.co/spaces/Phaneendrabayi/" target="_blank"
+                            class="text-light text-decoration-none">huggingface.co/Phaneendrabayi</a></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ✅ Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

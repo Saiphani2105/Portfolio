@@ -1,0 +1,118 @@
+/* Dropdown styles */
+.dropdown-menu-custom {
+  position: absolute;
+  background-color: #4d4d4d;
+  padding: 10px;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.dropdown-item-custom {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.dropdown-item-custom:hover {
+  background-color: #d4af37;
+  color: black;
+  font-weight: bold;
+}
+
+.d-none {
+  display: none;
+}
+
+
+
+
+
+/* ✅ Flip Card Container */
+.flip-card {
+  width: 100%;
+  height: 200px;
+  perspective: 1000px;
+}
+
+/* ✅ Inner container for flip effect */
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+/* ✅ Flip on hover */
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* ✅ Front and Back face */
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+  border: 2px solid #d4af37;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  backface-visibility: hidden;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+  transition: text-shadow 0.3s ease;
+}
+
+/* ✅ Stronger glow on hover */
+.flip-card:hover .flip-front,
+.flip-card:hover .flip-back {
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6), 0 0 12px rgba(212, 175, 55, 0.4);
+}
+
+/* ✅ Back Face Setup */
+.flip-back {
+  transform: rotateY(180deg);
+  background-color: #111;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* ✅ List inside the back */
+.flip-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flip-back ul li {
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+
+
+.project-card .project-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.project-card:hover .project-details {
+  max-height: 2000px; /* Large enough to show full content */
+  opacity: 1;
+}

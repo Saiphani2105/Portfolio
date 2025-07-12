@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Portfolio</title>
+
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .login-card {
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+      margin-top: 10vh;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+
+    .login-card h2 {
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .btn-gold {
+      background-color: #d4af37;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .form-control {
+      background-color: #2a2a2a;
+      border: none;
+      color: white;
+    }
+
+    .form-control:focus {
+      border: 1px solid #d4af37;
+      box-shadow: 0 0 5px #d4af37;
+      background-color: #2a2a2a;
+      color: white;
+    }
+
+    #toastContainer {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1055;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- ✅ Intro Section -->
+  <!-- ✅ Professional Intro Section -->
+  <section class="text-center py-4" style="max-width: 700px; margin: auto; color: #f0f0f0;">
+    <h1 class="fw-bold mb-3" style="color: #d4af37; font-size: 2.5rem;">
+      Welcome to My Portfolio
+    </h1>
+
+    <p class="lead fw-medium mb-1" style="color: #e0e0e0; font-size: 1.15rem;">
+      I'm <span style="color: #d4af37; font-weight: 600;">Bai Phaneendra</span>, a dedicated
+      <span class="fw-semibold">Machine Learning & AI Engineer :</span>
+    </p>
+
+    <p class="fst-italic" style="color: #bbbbbb; font-size: 1rem;">
+      "Transforming real-world problems into intelligent solutions"
+    </p>
+
+    <ul class="list-unstyled mt-3 mb-3" style="color: #cccccc; font-size: 1rem;">
+      <li>• Real-time ML Applications and Automation</li>
+      <li>• Computer Vision, Sign Language Detection</li>
+      <li>• Generative AI, Resume Builders, NLP</li>
+    </ul>
+
+    <p class="mt-2" style="color: #bbbbbb; font-size: 1rem;">
+      This login page provides secure access to
+      <span class="text-warning fw-semibold">exclusive content</span>:
+      <br />
+      Project demos, downloadable resumes, private GitHub links, and case studies.
+    </p>
+  </section>
+
+
+
+  <!-- ✅ Login Card -->
+  <div class="login-card">
+    <h2>Login</h2>
+
+    <!-- ✅ Success Alert (hidden initially) -->
+    <div id="successMsg" class="alert alert-success alert-dismissible fade show" role="alert" style="display:none;">
+      Login successful!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- ✅ Login Form -->
+    <form id="loginForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email">
+      </div>
+      <div class="mb-4">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password">
+      </div>
+      <button type="submit" class="btn btn-gold w-100">Login</button>
+    </form>
+  </div>
+
+  <!-- ✅ Toast Container (JS will inject toast messages here) -->
+  <div id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ✅ Bootstrap JS Bundle -->
+  <script>
+    const form = document.getElementById("loginForm");
+    const successMsg = document.getElementById("successMsg");
+    const toastContainer = document.getElementById("toastContainer");
+
+    // Function to show toast error messages
+    function showToast(message) {
+      const toastHTML = `
+      <div class="toast align-items-center text-bg-danger border-0 show mb-2" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">${message}</div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+      </div>
+    `;
+      const toastWrapper = document.createElement("div");
+      toastWrapper.innerHTML = toastHTML;
+      toastContainer.appendChild(toastWrapper);
+
+      // Auto-dismiss toast after 3 seconds
+      setTimeout(() => {
+        toastWrapper.remove();
+      }, 3000);
+    }
+
+    // Handle form submission
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Hide success message and clear previous toasts
+      successMsg.style.display = "none";
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      let valid = true;
+
+      // Email validation
+      if (!email || !email.includes("@gmail") || !email.includes(".com")) {
+        showToast("Please enter a valid email address.");
+        valid = false;
+      }
+
+      // Password validation
+      if (!password || password.length < 6) {
+        showToast("Password must be at least 6 characters.");
+        valid = false;
+      }
+
+      // Show success alert if valid
+      if (valid) {
+        successMsg.style.display = "block";
+        form.reset();
+
+        // Redirect to home.html after a short delay (e.g., 1.5 seconds)
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 1500);
+      }
+
+    });
+  </script>
+
+
+  <!-- ✅ Your JavaScript will go here -->
+
+</body>
+
+</html>
