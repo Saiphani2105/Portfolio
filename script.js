@@ -44,3 +44,31 @@ function openMediumHF() {
   function openHuggingFace1() {
     window.open("https://huggingface.co/spaces/Phaneendrabayi", "_blank");
   }
+
+
+
+fetch("certificates.json")
+    .then(response => {
+      if (!response.ok) throw new Error("File not found");
+      return response.json();
+    })
+    .then(data => {
+      const tableBody = document.getElementById("tableBody");
+      data.forEach((cert, index) => {
+        tableBody.innerHTML += `
+          <tr>
+            <td>${index + 1}</td>
+            <td>${cert.name}</td>
+            <td>${cert.course}</td>
+            <td>${cert.skills}</td>
+            <td><a href="${cert.link}" class="btn btn-sm btn-outline-light" target="_blank">View</a></td>
+          </tr>
+        `;
+      });
+    })
+    .catch(err => {
+      document.getElementById("tableBody").innerHTML = `
+        <tr><td colspan="5" class="text-danger text-center">Error: ${err.message}</td></tr>
+      `;
+      console.error("Fetch failed:", err);
+    });
