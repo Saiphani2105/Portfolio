@@ -48,27 +48,43 @@ function openMediumHF() {
 
 
 fetch("certificates.json")
-    .then(response => {
-      if (!response.ok) throw new Error("File not found");
-      return response.json();
-    })
-    .then(data => {
-      const tableBody = document.getElementById("tableBody");
-      data.forEach((cert, index) => {
-        tableBody.innerHTML += `
-          <tr>
-            <td>${index + 1}</td>
-            <td>${cert.name}</td>
-            <td>${cert.course}</td>
-            <td>${cert.skills}</td>
-            <td><a href="${cert.link}" class="btn btn-sm btn-outline-light" target="_blank">View</a></td>
-          </tr>
-        `;
-      });
-    })
-    .catch(err => {
-      document.getElementById("tableBody").innerHTML = `
-        <tr><td colspan="5" class="text-danger text-center">Error: ${err.message}</td></tr>
+  .then(response => {
+    if (!response.ok) throw new Error("File not found");
+    return response.json();
+  })
+  .then(data => {
+    const tableBody = document.getElementById("tableBody");
+    data.forEach((cert, index) => {
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${cert.name}</td>
+        <td>${cert.course}</td>
+        <td>${cert.skills}</td>
+        <td>
+          <a href="${cert.link}" class="btn btn-sm btn-outline-light" target="_blank">View</a>
+              <button class="btn btn-sm btn-outline-danger ms-2 delete-btn" title="Delete">
+                <i class="bi bi-trash"></i>
+              </button>
+        </td>
       `;
-      console.error("Fetch failed:", err);
+
+      // Append the row
+      tableBody.appendChild(row);
     });
+
+    // Attach event listeners to delete buttons
+    document.querySelectorAll(".delete-btn").forEach(button => {
+      button.addEventListener("click", function () {
+        const row = this.closest("tr");
+        row.remove();
+      });
+    });
+  })
+  .catch(err => {
+    document.getElementById("tableBody").innerHTML = `
+      <tr><td colspan="5" class="text-danger text-center">Error: ${err.message}</td></tr>
+    `;
+    console.error("Fetch failed:", err);
+  });
